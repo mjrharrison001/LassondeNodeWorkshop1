@@ -1,4 +1,4 @@
-//Adding post /form route and sending collected form data back to client LINES 59-100
+//Adding post /form route and sending collected form data back to client LINES 61-106
 // Example of final app running on Bluemix - http://lassondenode.mybluemix.net/form
 // Try entering your first and last name
 
@@ -69,7 +69,7 @@ app.post('/form', function (req, res) {
   //reuire is normally declared at the top of the app, placing here for easier read
   var fs = require('fs');
 
-  fs.readFile('page2.html', 'utf-8', function(err, html){
+  fs.readFile('page2t.html', 'utf-8', function(err, html){
     if (err){
       console.log(err);
       res.send("Whoops");
@@ -77,9 +77,9 @@ app.post('/form', function (req, res) {
     else{
       //var html constains our "base template" that we wish to add to
       //using .replace we swap in our collcted data for the "flag"
-      html = html.replace("#first#", fn);
-      html = html.replace("#last#", ln);
-      res.send(html);
+      //tml = html.replace("#first#", fn);
+      //html = html.replace("#last#", ln);
+      //res.send(html);
 
       html = html.replace("#first#", fn);
 
@@ -87,13 +87,17 @@ app.post('/form', function (req, res) {
       var nxt = ln;
 
       nxt += '</td></tr><tr><td>#first#</td><td>#last#</td></tr></tbody>';
+      //console.log(nxt);
+      //console.log(html);
       html = html.replace(rplc, nxt);
+      //console.log(html);
 
-      fs.writeFile('page2.html',html,function(err){
+      fs.writeFile('page2t.html',html,function(err){
         if(err){
           res.send("Whoops");
         }
         else{
+          console.log(html)
           res.send(html);
         }
       });

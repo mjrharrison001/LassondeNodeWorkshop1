@@ -1,0 +1,25 @@
+{
+  "name": "node_tutorial",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app5.js",
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "ejs": "^2.3.4",
+    "express": "^4.13.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mjrharrison001/LassondeNodeWorkshop1.git"
+  },
+  "author": "Michael Harrison",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mjrharrison001/LassondeNodeWorkshop1/issues"
+  },
+  "homepage": "https://github.com/mjrharrison001/LassondeNodeWorkshop1#readme"
+}
